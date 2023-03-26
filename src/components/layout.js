@@ -8,9 +8,16 @@ import {
     navLinkText
 } from './layout.module.css'
 
+import Helmet from 'react-helmet'
+
 const Layout = ({ pageTitle, children }) => {
     return (
         <div className={container}>
+            <Helmet
+                title="Gatsby Default Starter"
+            >
+                <html lang="en" />
+            </Helmet>
             <nav>
                 <ul className={navLinks}>
                     <li className={navLinkItem}><Link to="/" className={navLinkText}>Home</Link></li>
@@ -24,5 +31,7 @@ const Layout = ({ pageTitle, children }) => {
         </div>
     )
 }
+
+
 
 export default Layout;
